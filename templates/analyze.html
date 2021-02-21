@@ -1,0 +1,32 @@
+<html lang=en>
+<head>
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="/static/analyze.css">
+
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Sentiment Analyzer</h2>
+    <form id="text" method="POST" action="">
+      <div class="user-box">
+        <label>Enter text</label>
+        <textarea name="text" style="height:150px"></textarea>
+
+      </div>
+      <a href="#"  onclick="document.getElementById('text').submit();">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Analyze
+      </a><br><br>
+      <div class="user-box">
+        <label>Analyzed sentiment</label>
+        <textarea name="text" style="height:100px">{{text}}</textarea>
+
+      </div>
+    </form>
+  </div>
+  </body>
+  </html>

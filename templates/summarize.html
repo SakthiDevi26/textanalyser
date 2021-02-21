@@ -1,0 +1,37 @@
+<html lang=en>
+<head>
+    <title>Text Summarizer</title>
+    <link rel="stylesheet" href="/static/summarize.css">
+
+</head>
+<body>
+  <script src="/static/text.js"></script>
+
+<div class="login-box">
+    <h2>Summarizer</h2>
+    <form id="text" method="POST" action="">
+      <div class="user-box">
+        <label>Enter text</label>
+        <textarea name="text" style="height:100px"></textarea>
+
+      </div>
+      <div class="upload-btn-wrapper">
+  <button class="btn">Upload a file</button>
+  <input type="file" name="myfile" />
+</div>
+      <a href="#"  onclick="document.getElementById('text').submit();">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Summarize
+      </a><br><br>
+      <div class="user-box">
+        <label>Summarized text</label>
+        <textarea name="text" style="height:100px"{{text}}></textarea>
+
+      </div>
+    </form>
+  </div>
+  </body>
+  </html>
