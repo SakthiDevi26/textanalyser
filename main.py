@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 from app import SentimentPredictor
-#from app import Summarizer
+from app import Summarizer
 
 app = Flask(__name__)
 
@@ -18,8 +18,8 @@ sentiment_model_path=os.path.join(app.instance_path,'/tcs/flask/app/sentiment_mo
 print(sentiment_model_path)
 sentiment = SentimentPredictor(model_weight_path=sentiment_model_path)
 
-#summarizer_model_path=os.path.join(app.instance_path,'/tcs/flask/app/summarizer_model_weights')
-#summarizer = Summarizer(model_weight_path=summarizer_model_path)
+summarizer_model_path=os.path.join(app.instance_path,'/tcs/flask/app/summarizer_model_weights')
+summarizer = Summarizer(model_weight_path=summarizer_model_path)
 
 @app.route('/')
 def home():
@@ -60,5 +60,7 @@ def analyze():
         return render_template("analyze.html", text=output)
     elif request.method == 'GET':
         return render_template("analyze.html")
+
+
 if __name__=="__main__":
     app.run(debug=True)

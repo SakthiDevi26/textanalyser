@@ -26,3 +26,4 @@ transformers==4.3.1
 typing-extensions==3.7.4.3
 urllib3==1.26.3
 Werkzeug==1.0.1
+protobuf==3.15.1
